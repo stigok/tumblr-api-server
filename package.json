@@ -1,0 +1,17 @@
+{
+  "name": "tumblr-api-server",
+  "version": "0.0.1",
+  "description": "Serve content from a tumblr account",
+  "license": "MIT",
+  "bin": "bin/www",
+  "scripts": {
+    "test": "mocha",
+    "start": "node bin/www"
+  },
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "helmet": "^1.3.0",
+    "tumblr.js": "0.0.7"
+  }
+}

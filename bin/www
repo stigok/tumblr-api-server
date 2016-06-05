@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+
+const http = require('http');
+const config = require('../config.js');
+const app = require('../');
+
+const args = process.argv.slice(2);
+
+const port = args[0] || config.web.port;
+const hostname = args[1] || config.web.hostname;
+
+const server = http.createServer(app);
+server.listen(port, hostname, err => {
+  if (err) {
+    console.error('Error', err);
+  } else {
+    console.log('Listening for HTTP on %s:%d', hostname, port);
+  }
+});
